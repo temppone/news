@@ -1,5 +1,4 @@
-import { query } from "../../../../infra/database.js";
-import { client, DatabaseError } from "pg";
+import { query } from "infra/database.js";
 
 async function status(request, response) {
   const updatedAt = new Date().toISOString();
