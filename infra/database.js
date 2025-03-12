@@ -33,11 +33,11 @@ export async function query(queryObject) {
 }
 
 function getSSLValues() {
-  if(process.env.POSTGRES_CA){
+  if (process.env.POSTGRES_CA) {
     return {
-      ca: process.env.POSTGRES_CA
-    }
+      ca: process.env.POSTGRES_CA,
+    };
   }
 
-  return process.env.node === "development" ? false : true,
+  return process.env.node === "development" ? false : true;
 }
